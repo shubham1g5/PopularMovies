@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="511dp"
+        android:id="@+id/guideline5"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="192dp"
+        tools:layout_editor_absoluteY="0dp"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="226dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/poster_imageview"
+        android:adjustViewBounds="true"
+        app:layout_constraintRight_toLeftOf="@+id/guideline5"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="384dp"
+        android:layout_height="0dp"
+        android:id="@+id/guideline6"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="258dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.50489235" />
+
+    <TextView
+        android:text="Star Wars"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_tv"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/poster_imageview"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/plot_tv"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:text="Plot of Star wars with blah and blah "
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/plot_tv"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/poster_imageview"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:text="Released on:"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/release_tv"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintLeft_toLeftOf="@+id/plot_tv"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/plot_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/ratingbar"
+        android:numStars="1"
+        android:stepSize="0.1"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline5"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/count_tv"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/ratingbar"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingbar"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating_tv"
+        app:layout_constraintLeft_toLeftOf="@+id/count_tv"
+        app:layout_constraintTop_toTopOf="@+id/ratingbar"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/count_tv"
+        android:layout_marginBottom="8dp" />
+
+</android.support.constraint.ConstraintLayout>
