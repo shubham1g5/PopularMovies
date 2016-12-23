@@ -2,7 +2,7 @@ package com.example.shubham.popularmovies.model;
 
 import java.util.List;
 
-public class MovieResults {
+public class ReviewResults {
     @SuppressWarnings("unused")
-    public List<Movie> results;
+    public List<Review> results;
 }

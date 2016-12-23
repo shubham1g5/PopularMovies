@@ -5,10 +5,8 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 
-/**
- * Created by shubham on 19/11/16.
- */
 public class Settingsfragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
 
     @Override
@@ -18,7 +16,7 @@ public class Settingsfragment extends PreferenceFragment implements Preference.O
         bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_sortType_key)));
     }
 
-    private void bindPreferenceSummaryToValue(Preference preference) {
+    private void bindPreferenceSummaryToValue(@NonNull Preference preference) {
         preference.setOnPreferenceChangeListener(this);
         onPreferenceChange(preference,
                 PreferenceManager.getDefaultSharedPreferences(preference.getContext())
@@ -26,17 +24,7 @@ public class Settingsfragment extends PreferenceFragment implements Preference.O
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
+    public boolean onPreferenceChange(Preference preference, @NonNull Object newValue) {
         String newStringVal = newValue.toString();
 
         if (preference instanceof ListPreference) {

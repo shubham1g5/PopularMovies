@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="video"
+            type="com.example.shubham.popularmovies.model.Video" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_padding"
+        android:paddingStart="@dimen/activity_horizontal_padding"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/trailer_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{video.name}"
+            android:textColor="@color/colorAccent"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textStyle="bold" />
+    </LinearLayout>
+</layout>

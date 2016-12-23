@@ -18,12 +18,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".DetailActivity"
+            android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".SettingsActivity"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".DetailActivity"
-            android:parentActivityName=".MainActivity"></activity>
+
+        <provider
+            android:authorities="com.example.shubham.popularmovies.app"
+            android:name=".data.MovieProvider"
+            android:exported="false" />
     </application>
 
 </manifest>

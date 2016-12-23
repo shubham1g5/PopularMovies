@@ -18,6 +18,15 @@
             android:progressDrawable="@drawable/ic_loading_circle" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/empty_tv"
+        android:visibility="gone"
+        android:textAppearance="@android:style/TextAppearance.Holo.SearchResult.Subtitle"
+        android:layout_gravity="center"
+        android:padding="@dimen/activity_horizontal_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/movielist_recyclerview"
         android:layout_width="match_parent"

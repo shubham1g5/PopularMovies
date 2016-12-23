@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="movie"
+            type="com.example.shubham.popularmovies.model.Movie" />
+    </data>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/activity_horizontal_padding"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="0dp"
+            android:layout_height="511dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="384dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.50489235"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="258dp" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="0dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{movie.title}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Star Wars"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp" />
+
+        <TextView
+            android:id="@+id/plot_tv"
+            android:layout_width="352dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:text="@{movie.overview}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="Star Wars Jedi Jedi"
+            app:layout_constraintHorizontal_bias="0.33"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/ratingbar" />
+
+        <TextView
+            android:id="@+id/release_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{@string/released_on(movie.releaseDate)}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintLeft_toLeftOf="@+id/plot_tv"
+            tools:text="Released on: 45485"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/plot_tv" />
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="1"
+            android:rating="@{(float)movie.voteAverage/10}"
+            android:stepSize="0.1"
+            tools:rating="4"
+            app:layout_constraintTop_toBottomOf="@+id/title_tv"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/count_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{@string/votes_count(movie.voteCount)}"
+            tools:text="234 Votes"
+            app:layout_constraintLeft_toLeftOf="@+id/rating_tv"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/rating_tv" />
+
+        <TextView
+            android:id="@+id/rating_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`` + movie.voteAverage}"
+            tools:text="8.6"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/ratingbar"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintTop_toTopOf="@+id/ratingbar" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
