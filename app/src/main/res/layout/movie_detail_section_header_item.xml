@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_padding"
     android:paddingStart="@dimen/activity_horizontal_padding"
+    android:paddingTop="@dimen/section_top_padding"
     android:minHeight="?android:attr/listPreferredItemHeight"
     android:orientation="vertical">
 
