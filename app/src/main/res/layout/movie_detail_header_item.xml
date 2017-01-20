@@ -18,7 +18,7 @@
         <android.support.constraint.Guideline
             android:id="@+id/guideline5"
             android:layout_width="0dp"
-            android:layout_height="490dp"
+            android:layout_height="11039dp"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.5"
             tools:layout_editor_absoluteX="192dp"
@@ -43,7 +43,7 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.50489235"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="247dp" />
+            tools:layout_editor_absoluteY="5574dp" />
 
         <TextView
             android:id="@+id/title_tv"
@@ -51,9 +51,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="16dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="@{movie.title}"
