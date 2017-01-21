@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="activity_main" type="layout">@layout/activity_main_two_panes</item>
-    <item name="movie_detail_header_item" type="layout">@layout/movie_detail_header_item_two_pane</item>
-</resources>
