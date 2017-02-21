@@ -1,5 +1,5 @@
 # PopularMovies
-PopularMovies shows users most trending and top rates movies with ability to favourite movies and access them offline. It serves as a great example of how to use retrofit with RxJava to handle http requests and responses and how to use Android's new ConstraintLayout to implement application UI.
+PopularMovies shows users most trending and top rates movies with ability to favourite movies and access them offline. It serves as a great example of how to use retrofit with RxJava for making HTTP requests and how to use Android's new ConstraintLayout to implement application UI.
 
 ## Setup
 
